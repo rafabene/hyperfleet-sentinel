@@ -10,6 +10,11 @@ type OperationIDKey string
 
 const OpIDKey OperationIDKey = "opID"
 
+// TxIDKey is the typed context key for transaction ID
+type TxIDKey string
+
+const TxID TxIDKey = "txid"
+
 func WithOpID(ctx context.Context) context.Context {
 	if ctx.Value(OpIDKey) != nil {
 		return ctx
